@@ -3,6 +3,8 @@ const loggerMap = require('./logger').logger();
 // Setup Global Functions.
 require('./globalFunctions').globalFunctions(loggerMap);
 
+
+
 /* function testLog() {
     logAll("This is an INFO");
     logAll("This is an ERROR", 'ERROR');
