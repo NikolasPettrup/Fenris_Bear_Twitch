@@ -9,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "colors": "^1.4.0",
     "dotenv": "^8.2.0",
     "find-config": "^1.0.0",
+    "log4js": "^6.3.0",
     "tmi.js": "^1.8.1"
   }
 }
