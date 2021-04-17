@@ -1,9 +1,11 @@
+const dotenv = require('dotenv').config({
+    path: require('find-config')(".env")
+});
 // Define Logger.
 const loggerMap = require('./logger').logger();
 // Setup Global Functions.
 require('./globalFunctions').globalFunctions(loggerMap);
-
-
+var tmi = require('tmi.js');
 
 /* function testLog() {
     logAll("This is an INFO");
@@ -15,10 +17,6 @@ require('./globalFunctions').globalFunctions(loggerMap);
 }
 testLog(); */
 
-var tmi = require('tmi.js');
-const dotenv = require('dotenv').config({
-    path: require('find-config')(".env")
-});
 var options = {
     options: {
         debug: true
