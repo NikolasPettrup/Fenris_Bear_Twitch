@@ -77,31 +77,31 @@ client.on('chat', function (channel, user, message, self) {
         case ['discord', 'dc'].find((value, index, arr) => command === value):
             client.say(channelName, "/me Join our Community on Discord: https://discord.com/invite/396vVRPCRF");
             break;
-        // Twitter Command.
+            // Twitter Command.
         case 'twitter':
             client.say(channelName, "/me Follow Grizzley on Twitter: https://twitter.com/grizzIeylol");
             break;
-        // Fiverr Command.
+            // Fiverr Command.
         case 'fiverr':
             client.say(channelName, "/me Hire Grizzley on Fiverr: https://www.fiverr.com/kenowby");
             break;
-        // Instagram Command.
+            // Instagram Command.
         case ['instagram', 'insta', 'ig'].find((value, index, arr) => command === value):
             client.say(channelName, "/me Follow Grizzley on Instagram: https://www.instagram.com/grizzieylol/");
             break;
-        // Donation Command.
+            // Donation Command.
         case ['donation', 'donate', 'tip'].find((value, index, arr) => command === value):
             client.say(channelName, "/me If you want to give Grizzley a lil' tip, you can do this on his Tipeee <3 https://www.tipeeestream.com/kenowby/donation");
             break;
-        // Steam Command.
+            // Steam Command.
         case 'steam':
             client.say(channelName, "/me Add Grizzley on Steam: https://steamcommunity.com/id/thegrizziey/");
             break;
-        // Help-Command.
+            // Help-Command.
         case ['commands', 'cmds', 'cmd', 'help', 'command'].find((value, index, arr) => command === value):
-            client.say(channelName, "/me I can operate the following commands: !discord !twitter !instagram !fiverr !tip !steam !poke @username !8ball [Your yes-no-question]");
+            client.say(channelName, "/me I can operate the following commands: !d5 !discord !twitter !instagram !fiverr !tip !steam !poke @username !8ball [Your yes-no-question]");
             break;
-        // Shoutout Command.
+            // Shoutout Command.
         case 'so':
             if (args.length > 0) {
                 if (isModUp === true) {
@@ -109,21 +109,25 @@ client.on('chat', function (channel, user, message, self) {
                 }
             }
             break;
-        // Poke-Command.
+            // Poke-Command.
         case 'poke':
             if (args.length > 0) {
                 client.say(channelName, "/me Yo, @" + args[0].replace('@', '').toLowerCase() + " ! *poke* *poke* Lemme poke you! *poke* *poke* @" + author + " wants me to do dis.");
             }
             break;
-        //8 Ball
+            //8 Ball
         case '8ball':
             if (args.length >= 1 && args[0] != '') {
                 const randomMessage = eightball[Math.floor(Math.random() * eightball.length)];
                 client.say(channelName, "/me @" + author + " " + randomMessage);
+            } else {
+                client.say(channelName, "/me If there is no question, there is no answer. @" + author);
             }
-            else {
-                client.say(channelName, "/me If there is no question, there is no answer. @" +author);
-            }
+            break;
+            //DestinyV Command
+        case ['destiny', 'dv', 'd5', 'destinyv', 'destiny5'].find((value, index, arr) => command == value):
+            client.say(channelName, '/me DestinyV is a German GTA V Roleplay server project by Grizzley and two of his friends which currently is in development. Discord-Server: https://discord.gg/URkNCPJeWe');
+            client.say(channelName, '/me 🇩🇪 Bei Interesse an einer Mitarbeit als Gamedesigner, Supporter oder Developer, tretet dem obigen Discordserver bei und schickt einem Mitglied der Projektleitung eine DM.');
             break;
 
     }
