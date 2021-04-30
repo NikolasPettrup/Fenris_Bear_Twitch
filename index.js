@@ -48,7 +48,7 @@ client.on('connected', function (adress, port) {
 const eightball = ['As I see it, yes. And now don\'t get on my nerves any longer.', 'Ask again later. I\'m too busy doing bear-god-things right now, u know?', 'My sources say no. And ya know, Imma bear-god, so it\'s true.', 'The answer to your question is 42 and the universe.'];
 
 //Grogu-Counter Variable
-var grogu = 0;
+var i = 0;
 
 
 // Listen to chat.
@@ -78,7 +78,7 @@ client.on('chat', function (channel, user, message, self) {
     switch (command) {
         // Help-Command.
         case ['commands', 'cmds', 'cmd', 'help', 'command'].find((value, index, arr) => command === value):
-            client.say(channelName, "/me I can operate the following commands: !d5 !discord !twitter !instagram !fiverr !tip !steam !poke @username !8ball [Your yes-no-question]");
+            client.say(channelName, "/me I can operate the following commands: !d5 !discord !twitter !instagram !fiverr !tip !steam !poke @username !8ball [Your yes-no-question] !grogu");
             break;
 
             // Discord Command.
@@ -133,10 +133,11 @@ client.on('chat', function (channel, user, message, self) {
             client.say(channelName, '/me DestinyV is a German GTA V Roleplay server project by Grizzley and two of his friends which currently is in development. Discord-Server: https://discord.gg/URkNCPJeWe');
             client.say(channelName, '/me 🇩🇪 Bei Interesse an einer Mitarbeit als Gamedesigner, Supporter oder Developer, tretet dem obigen Discordserver bei und schickt einem Mitglied der Projektleitung eine DM.');
             break;
-        
+
+            //Grogu Counter        
         case 'grogu':
-            grogu++;
-            client.say(channelName, '/me Grogu was in trouble again, but you saved him, @' + author + '! Baby Yoda was already saved ' + grogu + ' times by this Twitch chat!');
+            i++;
+            client.say(channelName, '/me Grogu was in trouble again, but you saved him, @' + author + '! Baby Yoda was already saved ' + i + ' times by this Twitch chat!');
             break;
     }
 });
