@@ -47,6 +47,9 @@ client.on('connected', function (adress, port) {
 //8Ball Variables
 const eightball = ['As I see it, yes. And now don\'t get on my nerves any longer.', 'Ask again later. I\'m too busy doing bear-god-things right now, u know?', 'My sources say no. And ya know, Imma bear-god, so it\'s true.', 'The answer to your question is 42 and the universe.'];
 
+//Grogu-Counter Variable
+var i = 0;
+
 
 // Listen to chat.
 client.on('chat', function (channel, user, message, self) {
@@ -73,7 +76,12 @@ client.on('chat', function (channel, user, message, self) {
     let args = message.slice(prefix.length).slice(command.length).trim().split(" ");
 
     switch (command) {
-        // Discord Command.
+        // Help-Command.
+        case ['commands', 'cmds', 'cmd', 'help', 'command'].find((value, index, arr) => command === value):
+            client.say(channelName, "/me I can operate the following commands: !d5 !discord !twitter !instagram !fiverr !tip !steam !poke @username !8ball [Your yes-no-question] !grogu");
+            break;
+
+            // Discord Command.
         case ['discord', 'dc'].find((value, index, arr) => command === value):
             client.say(channelName, "/me Join our Community on Discord: https://discord.com/invite/396vVRPCRF");
             break;
@@ -96,10 +104,6 @@ client.on('chat', function (channel, user, message, self) {
             // Steam Command.
         case 'steam':
             client.say(channelName, "/me Add Grizzley on Steam: https://steamcommunity.com/id/thegrizziey/");
-            break;
-            // Help-Command.
-        case ['commands', 'cmds', 'cmd', 'help', 'command'].find((value, index, arr) => command === value):
-            client.say(channelName, "/me I can operate the following commands: !d5 !discord !twitter !instagram !fiverr !tip !steam !poke @username !8ball [Your yes-no-question]");
             break;
             // Shoutout Command.
         case 'so':
@@ -130,5 +134,10 @@ client.on('chat', function (channel, user, message, self) {
             client.say(channelName, '/me 🇩🇪 Bei Interesse an einer Mitarbeit als Gamedesigner, Supporter oder Developer, tretet dem obigen Discordserver bei und schickt einem Mitglied der Projektleitung eine DM.');
             break;
 
+            //Grogu Counter        
+        case 'grogu':
+            i++;
+            client.say(channelName, '/me Grogu was in trouble again, but you saved him, @' + author + '! Baby Yoda was already saved ' + i + ' times by this Twitch chat!');
+            break;
     }
 });
