@@ -79,7 +79,7 @@ client.on('chat', function (channel, user, message, self) {
     const isModUp = isMod || isBroadcaster;
 
     //Timed Message abspielen
-    for (1 == 1){
+    if (1 == 1){
         timedMessages();
     }
 
@@ -157,15 +157,14 @@ client.on('chat', function (channel, user, message, self) {
             break;
     }
 
+        //Timed Messages Function
+        function timedMessages() {
+            setInterval(
+                function(){    
+                const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)];
+                client.say(channelName, '/me ' +randomPost+ ''); }, 
+                3000
+                );
+            }
+
 });
-
-
-    //Timed Messages Function
-    function timedMessages() {
-        setInterval(
-            function(){    
-            const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)];
-            client.say(channelName, '/me ' +randomPost+ ''); }, 
-            3000
-            );
-        }
