@@ -62,6 +62,11 @@ const timedmsg = [
 //Grogu-Counter Variable
 var i = 0;
 
+//Execute Timed Messages
+if (1 == 1){
+    timedMessages();
+}
+
 
 // Listen to chat.
 client.on('chat', function (channel, user, message, self) {
@@ -153,14 +158,14 @@ client.on('chat', function (channel, user, message, self) {
             break;
     }
 
-        //Timed Messages Function
-        function timedMessages() {
-            setInterval(
-                function(){    
-                const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)];
-                client.say(channelName, '/me ' +randomPost+ ''); }, 
-                3000
-                );
-            }
+    //Timed Messages Function
+    function timedMessages() {
+        setInterval(
+            function(){    
+            const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)];
+            client.say(channelName, '/me ' +randomPost+ ''); }, 
+            1800000
+        );
+    }
 
 });
