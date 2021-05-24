@@ -55,6 +55,12 @@ const eightball = [
 //Grogu-Counter Variable
 var i = 0;
 
+<<<<<<< HEAD
+=======
+//Timed Messages will come here
+
+
+>>>>>>> develop
 // Listen to chat.
 client.on('chat', function (channel, user, message, self) {
     // Return if message came from yourself.
