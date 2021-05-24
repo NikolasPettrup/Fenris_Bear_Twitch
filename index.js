@@ -45,10 +45,17 @@ client.on('connected', function (adress, port) {
 });
 
 //8Ball Variables
-const eightball = ['As I see it, yes. And now don\'t get on my nerves any longer.', 'Ask again later. I\'m too busy doing bear-god-things right now, u know?', 'My sources say no. And ya know, Imma bear-god, so it\'s true.', 'The answer to your question is 42 and the universe.'];
+const eightball = [
+    'As I see it, yes. And now don\'t get on my nerves any longer.',
+    'Ask again later. I\'m too busy doing bear-god-things right now, u know?', 
+    'My sources say no. And ya know, Imma bear-god, so it\'s true.', 
+    'The answer to your question is 42 and the universe.'
+];
 
 //Grogu-Counter Variable
 var i = 0;
+
+//Timed Messages will come here
 
 // Listen to chat.
 client.on('chat', function (channel, user, message, self) {
@@ -148,4 +155,5 @@ client.on('chat', function (channel, user, message, self) {
             client.say(channelName, '/me Grogu was in trouble again, but you saved him, @' + author + '! Baby Yoda was already saved ' + i + ' times by this Twitch chat!');
             break;
     }
+
 });
