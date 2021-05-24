@@ -63,7 +63,7 @@ const timedmsg = [
 var i = 0;
 
 
-//Timers
+/* //Timers
 client.on('chat', function(channel, message, self){
     if (self) return;
     if (1 == 1){
@@ -79,7 +79,7 @@ client.on('chat', function(channel, message, self){
            1800000
        );
    }
-});
+}); */
 
 // Listen to chat.
 client.on('chat', function (channel, user, message, self) {
