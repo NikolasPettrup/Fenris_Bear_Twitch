@@ -63,6 +63,7 @@ const timedmsg = [
 var i = 0;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* //Execute Timed Messages
 <<<<<<< HEAD
 if (1 == 1) {
@@ -76,6 +77,8 @@ if (1 == 1){
 }
 
 
+=======
+>>>>>>> develop
 // Listen to chat.
 client.on('chat', function (channel, user, message, self) {
     // Return if message came from yourself.
@@ -90,6 +93,8 @@ client.on('chat', function (channel, user, message, self) {
     const isBroadcaster = channel.slice(1) === author;
     //Check if user is Moderator or Broadcaster.
     const isModUp = isMod || isBroadcaster;
+
+    timedMessages();
 
 
 
