@@ -79,15 +79,6 @@ client.on('chat', function (channel, user, message, self) {
     const isModUp = isMod || isBroadcaster;
 
 
-
-    //Timed Messages Function
-     setInterval(
-            function(){    
-            const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)];
-            client.say(channelName, '/me ' +randomPost+ ''); }, 3000);
-
-
-
     // If message dosen't start with prefix do nothing;
     if (!message.startsWith(prefix)) return;
     // Get Command-Name.
@@ -160,4 +151,14 @@ client.on('chat', function (channel, user, message, self) {
             client.say(channelName, '/me Grogu was in trouble again, but you saved him, @' + author + '! Baby Yoda was already saved ' + i + ' times by this Twitch chat!');
             break;
     }
+
+    //Timed Messages Function
+    function timedMessages() {
+        setInterval(
+            function(){    
+            const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)];
+            client.say(channelName, '/me ' +randomPost+ ''); }, 
+            3000
+            );
+        }
 });
