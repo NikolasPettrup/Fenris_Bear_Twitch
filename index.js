@@ -45,7 +45,19 @@ client.on('connected', function (adress, port) {
 });
 
 //8Ball Variables
-const eightball = ['As I see it, yes. And now don\'t get on my nerves any longer.', 'Ask again later. I\'m too busy doing bear-god-things right now, u know?', 'My sources say no. And ya know, Imma bear-god, so it\'s true.', 'The answer to your question is 42 and the universe.'];
+const eightball = [
+    'As I see it, yes. And now don\'t get on my nerves any longer.',
+    'Ask again later. I\'m too busy doing bear-god-things right now, u know?', 
+    'My sources say no. And ya know, Imma bear-god, so it\'s true.', 
+    'The answer to your question is 42 and the universe.'
+];
+
+//Timed Messages Variables
+const timedmsg = [
+    '/me Join our Discord-Server now to stay connected with the whole Community! https://discord.com/invite/396vVRPCRF',
+    '/me Follow me on Social-Media to be up to date! https://www.instagram.com/grizzieylol/ | https://twitter.com/grizzIeylol',
+    '/me If you want your own custom Emotes or Subscriber-Badges, feel free to hire me on Fiverr! https://www.fiverr.com/kenowby'
+];
 
 //Grogu-Counter Variable
 var i = 0;
@@ -65,6 +77,15 @@ client.on('chat', function (channel, user, message, self) {
     const isBroadcaster = channel.slice(1) === author;
     //Check if user is Moderator or Broadcaster.
     const isModUp = isMod || isBroadcaster;
+
+
+
+    //Timed Messages Function
+    function timedMessages() {
+        setInterval(function(){    
+            const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)];
+            client.say(channelName, randomPost); }, 3000);
+      }
 
 
 
