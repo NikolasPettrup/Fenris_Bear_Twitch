@@ -82,7 +82,7 @@ if (1 == 1){
 >>>>>>> develop
 =======
 
-//Timers
+/* //Timers
 client.on('chat', function(channel, message, self){
     if (self) return;
     if (1 == 1){
@@ -98,7 +98,7 @@ client.on('chat', function(channel, message, self){
            1800000
        );
    }
-});
+}); */
 
 >>>>>>> develop
 // Listen to chat.
