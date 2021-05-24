@@ -50,6 +50,8 @@ const eightball = ['As I see it, yes. And now don\'t get on my nerves any longer
 //Grogu-Counter Variable
 var i = 0;
 
+//Timed Messages will come here
+
 
 // Listen to chat.
 client.on('chat', function (channel, user, message, self) {
