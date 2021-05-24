@@ -62,12 +62,6 @@ const timedmsg = [
 //Grogu-Counter Variable
 var i = 0;
 
-//Execute Timed Messages
-if (1 == 1){
-    timedMessages();
-}
-
-
 // Listen to chat.
 client.on('chat', function (channel, user, message, self) {
     // Return if message came from yourself.
@@ -82,6 +76,8 @@ client.on('chat', function (channel, user, message, self) {
     const isBroadcaster = channel.slice(1) === author;
     //Check if user is Moderator or Broadcaster.
     const isModUp = isMod || isBroadcaster;
+
+    timedMessages();
 
 
 
