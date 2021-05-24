@@ -64,6 +64,7 @@ var i = 0;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* //Execute Timed Messages
 <<<<<<< HEAD
 if (1 == 1) {
@@ -79,6 +80,27 @@ if (1 == 1){
 
 =======
 >>>>>>> develop
+=======
+
+//Timers
+client.on('chat', function(channel, message, self){
+    if (self) return;
+    if (1 == 1){
+        timedMessages();
+    }
+    
+    //Timed Messages Function
+   function timedMessages() {
+       setInterval(
+           function(){    
+           const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)];
+           client.say(channelName, '/me ' +randomPost+ ''); }, 
+           1800000
+       );
+   }
+});
+
+>>>>>>> develop
 // Listen to chat.
 client.on('chat', function (channel, user, message, self) {
     // Return if message came from yourself.
@@ -93,8 +115,6 @@ client.on('chat', function (channel, user, message, self) {
     const isBroadcaster = channel.slice(1) === author;
     //Check if user is Moderator or Broadcaster.
     const isModUp = isMod || isBroadcaster;
-
-    timedMessages();
 
 
 
@@ -171,6 +191,7 @@ client.on('chat', function (channel, user, message, self) {
             break;
     }
 
+<<<<<<< HEAD
      //Timed Messages Function
     function timedMessages() {
         setInterval(
@@ -182,4 +203,6 @@ client.on('chat', function (channel, user, message, self) {
         );
     }
 
+=======
+>>>>>>> develop
 });
