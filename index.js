@@ -57,6 +57,8 @@ var i = 0;
 
 //Timed Messages will come here
 
+// Test Change.
+
 // Listen to chat.
 client.on('chat', function (channel, user, message, self) {
     // Return if message came from yourself.
