@@ -62,14 +62,18 @@ const timedmsg = [
 //Grogu-Counter Variable
 var i = 0;
 
+<<<<<<< HEAD
 /* //Execute Timed Messages
 <<<<<<< HEAD
 if (1 == 1) {
 =======
+=======
+//Execute Timed Messages
+>>>>>>> develop
 if (1 == 1){
 >>>>>>> develop
     timedMessages();
-} */
+}
 
 
 // Listen to chat.
@@ -162,7 +166,7 @@ client.on('chat', function (channel, user, message, self) {
             break;
     }
 
-/*     //Timed Messages Function
+     //Timed Messages Function
     function timedMessages() {
         setInterval(
             function () {
@@ -171,6 +175,6 @@ client.on('chat', function (channel, user, message, self) {
             },
             1800000
         );
-    } */
+    }
 
 });
