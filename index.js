@@ -78,10 +78,6 @@ client.on('chat', function (channel, user, message, self) {
     //Check if user is Moderator or Broadcaster.
     const isModUp = isMod || isBroadcaster;
 
-    //Timed Message abspielen
-    if (1 == 1){
-        timedMessages();
-    }
 
 
     // If message dosen't start with prefix do nothing;
