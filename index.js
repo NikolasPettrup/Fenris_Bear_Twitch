@@ -47,8 +47,8 @@ client.on('connected', function (adress, port) {
 //8Ball Variables
 const eightball = [
     'As I see it, yes. And now don\'t get on my nerves any longer.',
-    'Ask again later. I\'m too busy doing bear-god-things right now, u know?', 
-    'My sources say no. And ya know, Imma bear-god, so it\'s true.', 
+    'Ask again later. I\'m too busy doing bear-god-things right now, u know?',
+    'My sources say no. And ya know, Imma bear-god, so it\'s true.',
     'The answer to your question is 42 and the universe.'
 ];
 
@@ -62,10 +62,10 @@ const timedmsg = [
 //Grogu-Counter Variable
 var i = 0;
 
-//Execute Timed Messages
-if (1 == 1){
+/* //Execute Timed Messages
+if (1 == 1) {
     timedMessages();
-}
+} */
 
 
 // Listen to chat.
@@ -158,14 +158,15 @@ client.on('chat', function (channel, user, message, self) {
             break;
     }
 
-    //Timed Messages Function
+/*     //Timed Messages Function
     function timedMessages() {
         setInterval(
-            function(){    
-            const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)];
-            client.say(channelName, '/me ' +randomPost+ ''); }, 
+            function () {
+                const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)];
+                client.say(channelName, '/me ' + randomPost + '');
+            },
             1800000
         );
-    }
+    } */
 
 });
