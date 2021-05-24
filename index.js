@@ -47,60 +47,14 @@ client.on('connected', function (adress, port) {
 //8Ball Variables
 const eightball = [
     'As I see it, yes. And now don\'t get on my nerves any longer.',
-    'Ask again later. I\'m too busy doing bear-god-things right now, u know?',
-    'My sources say no. And ya know, Imma bear-god, so it\'s true.',
+    'Ask again later. I\'m too busy doing bear-god-things right now, u know?', 
+    'My sources say no. And ya know, Imma bear-god, so it\'s true.', 
     'The answer to your question is 42 and the universe.'
-];
-
-//Timed Messages Variables
-const timedmsg = [
-    'Join our Discord-Server now to stay connected with the whole Community! https://discord.com/invite/396vVRPCRF',
-    'Follow me on Social-Media to be up to date! https://www.instagram.com/grizzieylol/ | https://twitter.com/grizzIeylol',
-    'If you want your own custom Emotes or Subscriber-Badges, feel free to hire me on Fiverr! https://www.fiverr.com/kenowby'
 ];
 
 //Grogu-Counter Variable
 var i = 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* //Execute Timed Messages
-<<<<<<< HEAD
-if (1 == 1) {
-=======
-=======
-//Execute Timed Messages
->>>>>>> develop
-if (1 == 1){
->>>>>>> develop
-    timedMessages();
-}
-
-
-=======
->>>>>>> develop
-=======
-
-/* //Timers
-client.on('chat', function(channel, message, self){
-    if (self) return;
-    if (1 == 1){
-        timedMessages();
-    }
-    
-    //Timed Messages Function
-   function timedMessages() {
-       setInterval(
-           function(){    
-           const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)];
-           client.say(channelName, '/me ' +randomPost+ ''); }, 
-           1800000
-       );
-   }
-}); */
-
->>>>>>> develop
 // Listen to chat.
 client.on('chat', function (channel, user, message, self) {
     // Return if message came from yourself.
@@ -191,18 +145,4 @@ client.on('chat', function (channel, user, message, self) {
             break;
     }
 
-<<<<<<< HEAD
-     //Timed Messages Function
-    function timedMessages() {
-        setInterval(
-            function () {
-                const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)];
-                client.say(channelName, '/me ' + randomPost + '');
-            },
-            1800000
-        );
-    }
-
-=======
->>>>>>> develop
 });
