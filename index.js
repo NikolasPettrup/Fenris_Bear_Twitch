@@ -62,11 +62,24 @@ const timedmsg = [
 //Grogu-Counter Variable
 var i = 0;
 
-//Execute Timed Messages
-if (1 == 1){
-    timedMessages();
-}
 
+//Timers
+client.on('chat', function(channel, message, self){
+    if (self) return;
+    if (1 == 1){
+        timedMessages();
+    }
+    
+    //Timed Messages Function
+   function timedMessages() {
+       setInterval(
+           function(){    
+           const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)];
+           client.say(channelName, '/me ' +randomPost+ ''); }, 
+           1800000
+       );
+   }
+});
 
 // Listen to chat.
 client.on('chat', function (channel, user, message, self) {
@@ -156,16 +169,6 @@ client.on('chat', function (channel, user, message, self) {
             i++;
             client.say(channelName, '/me Grogu was in trouble again, but you saved him, @' + author + '! Baby Yoda was already saved ' + i + ' times by this Twitch chat!');
             break;
-    }
-
-    //Timed Messages Function
-    function timedMessages() {
-        setInterval(
-            function(){    
-            const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)];
-            client.say(channelName, '/me ' +randomPost+ ''); }, 
-            1800000
-        );
     }
 
 });
