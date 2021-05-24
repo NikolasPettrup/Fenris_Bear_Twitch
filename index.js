@@ -63,7 +63,11 @@ const timedmsg = [
 var i = 0;
 
 /* //Execute Timed Messages
+<<<<<<< HEAD
 if (1 == 1) {
+=======
+if (1 == 1){
+>>>>>>> develop
     timedMessages();
 } */
 
