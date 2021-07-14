@@ -47,8 +47,8 @@ client.on('connected', function (adress, port) {
 //8Ball Variables
 const eightball = [
     'As I see it, yes. And now don\'t get on my nerves any longer.',
-    'Ask again later. I\'m too busy doing bear-god-things right now, u know?', 
-    'My sources say no. And ya know, Imma bear-god, so it\'s true.', 
+    'Ask again later. I\'m too busy doing bear-god-things right now, u know?',
+    'My sources say no. And ya know, Imma bear-god, so it\'s true.',
     'The answer to your question is 42 and the universe.'
 ];
 
@@ -56,15 +56,16 @@ const eightball = [
 var i = 0;
 
 //Timed Messages will come here
-const timedmsg = [ 
-    'Join our Discord-Server now to stay connected with the whole Community! https://discord.com/invite/396vVRPCRF', 
-    'Follow me on Social-Media to be up to date! https://www.instagram.com/grizzieylol/ | https://twitter.com/grizzIeylol', 
-    'If you want your own custom Emotes or Subscriber-Badges, feel free to hire me on Fiverr! https://www.fiverr.com/kenowby' 
-]; 
+const timedmsg = [
+    'Join our Discord-Server now to stay connected with the whole Community! https://discord.com/invite/396vVRPCRF',
+    'Follow me on Social-Media to be up to date! https://www.instagram.com/grizzieylol/ | https://twitter.com/grizzIeylol',
+    'If you want your own custom Emotes or Subscriber-Badges, feel free to hire me on Fiverr! https://www.fiverr.com/kenowby',
+    'If you want to see exclusive Speedpaints and other videos of mine, feel free to follow me on Youtube! https://www.youtube.com/channel/UChXii0Ai8kFyZGP7VIVSGKg'
+];
 
 setInterval(() => {
-    const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)]; 
-    client.say(channelName, '/me ' +randomPost); 
+    const randomPost = timedmsg[Math.floor(Math.random() * timedmsg.length)];
+    client.say(channelName, '/me ' +randomPost);
 }, 1800000);
 
 
@@ -162,10 +163,15 @@ client.on('chat', function (channel, user, message, self) {
             client.say(channelName, '/me 🇩🇪 Bei Interesse an einer Mitarbeit als Gamedesigner, Supporter oder Developer, tretet dem obigen Discordserver bei und schickt einem Mitglied der Projektleitung eine DM.');
             break;
 
-        //Grogu Counter        
+        //Grogu Counter
         case 'grogu':
             i++;
             client.say(channelName, '/me Grogu was in trouble again, but you saved him, @' + author + '! Baby Yoda was already saved ' + i + ' times by this Twitch chat!');
+            break;
+
+        //Youtube
+        case ['yt', 'youtube'].find((value, index, arr) => command == value):
+            client.say(channelName, '/me Follow me on Youtube for exclusive Speedpaints and more! https://www.youtube.com/channel/UChXii0Ai8kFyZGP7VIVSGKg');
             break;
     }
 
