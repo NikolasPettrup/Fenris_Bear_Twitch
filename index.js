@@ -29,11 +29,11 @@ var options = {
         username: process.env.TWITCHUSER,
         password: process.env.TWITCHOAUTH
     },
-    channels: ["TheGrizzIey"]
+    channels: ["Ratback"]
 };
 
 let prefix = '!';
-let channelName = 'TheGrizzIey';
+let channelName = 'Ratback';
 
 var client = new tmi.client(options);
 client.connect();
@@ -98,7 +98,7 @@ client.on('chat', function (channel, user, message, self) {
     switch (command) {
         // Help-Command.
         case ['commands', 'cmds', 'cmd', 'help', 'command'].find((value, index, arr) => command === value):
-            client.say(channelName, "/me I can operate the following commands: !d5 !discord !twitter !instagram !fiverr !tip !steam !poke @username !8ball [Your yes-no-question] !grogu");
+            client.say(channelName, "/me I can operate the following commands: !discord !twitter !instagram !fiverr !tip !steam !poke @username !8ball [Your yes-no-question] !youtube");
             break;
 
         // Discord Command.
@@ -108,27 +108,27 @@ client.on('chat', function (channel, user, message, self) {
 
         // Twitter Command.
         case 'twitter':
-            client.say(channelName, "/me Follow Grizzley on Twitter: https://twitter.com/grizzIeylol");
+            client.say(channelName, "/me Follow Ratback on Twitter: https://twitter.com/grizzIeylol");
             break;
 
         // Fiverr Command.
         case 'fiverr':
-            client.say(channelName, "/me Hire Grizzley on Fiverr: https://www.fiverr.com/kenowby");
+            client.say(channelName, "/me Hire Ratback on Fiverr: https://www.fiverr.com/kenowby");
             break;
 
         // Instagram Command.
         case ['instagram', 'insta', 'ig'].find((value, index, arr) => command === value):
-            client.say(channelName, "/me Follow Grizzley on Instagram: https://www.instagram.com/grizzieylol/");
+            client.say(channelName, "/me Follow Ratback on Instagram: https://www.instagram.com/grizzieylol/");
             break;
 
         // Donation Command.
         case ['donation', 'donate', 'tip'].find((value, index, arr) => command === value):
-            client.say(channelName, "/me If you want to give Grizzley a lil' tip, you can do this on his Tipeee <3 https://www.tipeeestream.com/kenowby/donation");
+            client.say(channelName, "/me If you want to give Ratback a lil' tip, you can do this on his Tipeee <3 https://www.tipeeestream.com/kenowby/donation");
             break;
 
         // Steam Command.
         case 'steam':
-            client.say(channelName, "/me Add Grizzley on Steam: https://steamcommunity.com/id/thegrizziey/");
+            client.say(channelName, "/me Add Ratback on Steam: https://steamcommunity.com/id/thegrizziey/");
             break;
 
         // Shoutout Command.
@@ -155,18 +155,6 @@ client.on('chat', function (channel, user, message, self) {
             } else {
                 client.say(channelName, "/me If there is no question, there is no answer. @" + author);
             }
-            break;
-
-        //DestinyV Command
-        case ['destiny', 'dv', 'd5', 'destinyv', 'destiny5'].find((value, index, arr) => command == value):
-            client.say(channelName, '/me DestinyV is a German GTA V Roleplay server project by Grizzley and two of his friends which currently is in development. Discord-Server: https://discord.gg/URkNCPJeWe');
-            client.say(channelName, '/me 🇩🇪 Bei Interesse an einer Mitarbeit als Gamedesigner, Supporter oder Developer, tretet dem obigen Discordserver bei und schickt einem Mitglied der Projektleitung eine DM.');
-            break;
-
-        //Grogu Counter
-        case 'grogu':
-            i++;
-            client.say(channelName, '/me Grogu was in trouble again, but you saved him, @' + author + '! Baby Yoda was already saved ' + i + ' times by this Twitch chat!');
             break;
 
         //Youtube
