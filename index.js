@@ -98,7 +98,7 @@ client.on('chat', function (channel, user, message, self) {
     switch (command) {
         // Help-Command.
         case ['commands', 'cmds', 'cmd', 'help', 'command'].find((value, index, arr) => command === value):
-            client.say(channelName, "/me I can operate the following commands: !discord !twitter !instagram !fiverr !tip !steam !poke @username !8ball [Your yes-no-question] !youtube");
+            client.say(channelName, "/me I can operate the following commands: !discord !twitter !instagram !fiverr !tip !steam !poke @username !8ball [Your yes-no-question] !youtube !lurk !hydrate");
             break;
 
         // Discord Command.
@@ -160,6 +160,16 @@ client.on('chat', function (channel, user, message, self) {
         //Youtube
         case ['yt', 'youtube'].find((value, index, arr) => command == value):
             client.say(channelName, '/me Follow me on Youtube for exclusive Speedpaints and more! https://www.youtube.com/channel/UChXii0Ai8kFyZGP7VIVSGKg');
+            break;
+
+        //Lurk
+        case 'lurk':
+            client.say(channelName, '/me @' + author + " is entering Lurkmode now, lol. Thanks for watching my stream!");
+            break;
+
+        //Hydrate
+        case ['hydrate', 'drink', 'water'].find((value, index, arr) => command == value):
+            client.say(channelName, '/me Remember to drink enough water over time! Cheers!');
             break;
     }
 
