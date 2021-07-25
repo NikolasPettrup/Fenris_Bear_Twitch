@@ -58,7 +58,7 @@ var i = 0;
 //Timed Messages will come here
 const timedmsg = [
     'Join our Discord-Server now to stay connected with the whole Community! https://discord.com/invite/396vVRPCRF',
-    'Follow me on Social-Media to be up to date! https://www.instagram.com/grizzieylol/ | https://twitter.com/grizzIeylol',
+    'Follow me on Social-Media to be up to date! https://www.instagram.com/ratbackttv/ | https://twitter.com/ratbackttv',
     'If you want your own custom Emotes or Subscriber-Badges, feel free to hire me on Fiverr! https://www.fiverr.com/kenowby',
     'If you want to see exclusive Speedpaints and other videos of mine, feel free to follow me on Youtube! https://www.youtube.com/channel/UChXii0Ai8kFyZGP7VIVSGKg'
 ];
@@ -108,7 +108,7 @@ client.on('chat', function (channel, user, message, self) {
 
         // Twitter Command.
         case 'twitter':
-            client.say(channelName, "/me Follow Ratback on Twitter: https://twitter.com/grizzIeylol");
+            client.say(channelName, "/me Follow Ratback on Twitter: https://twitter.com/ratbackttv");
             break;
 
         // Fiverr Command.
@@ -118,7 +118,7 @@ client.on('chat', function (channel, user, message, self) {
 
         // Instagram Command.
         case ['instagram', 'insta', 'ig'].find((value, index, arr) => command === value):
-            client.say(channelName, "/me Follow Ratback on Instagram: https://www.instagram.com/grizzieylol/");
+            client.say(channelName, "/me Follow Ratback on Instagram: https://www.instagram.com/ratbackttv/");
             break;
 
         // Donation Command.
@@ -128,7 +128,7 @@ client.on('chat', function (channel, user, message, self) {
 
         // Steam Command.
         case 'steam':
-            client.say(channelName, "/me Add Ratback on Steam: https://steamcommunity.com/id/thegrizziey/");
+            client.say(channelName, "/me Add Ratback on Steam: https://steamcommunity.com/id/ratback/");
             break;
 
         // Shoutout Command.
