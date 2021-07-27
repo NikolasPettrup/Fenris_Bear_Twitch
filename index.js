@@ -60,7 +60,9 @@ const timedmsg = [
     'Join our Discord-Server now to stay connected with the whole Community! https://discord.com/invite/396vVRPCRF',
     'Follow me on Social-Media to be up to date! https://www.instagram.com/ratbackttv/ | https://twitter.com/ratbackttv',
     'If you want your own custom Emotes or Subscriber-Badges, feel free to hire me on Fiverr! https://www.fiverr.com/kenowby',
-    'If you want to see exclusive Speedpaints and other videos of mine, feel free to follow me on Youtube! https://www.youtube.com/channel/UChXii0Ai8kFyZGP7VIVSGKg'
+    'If you want to see exclusive Speedpaints and other videos of mine, feel free to follow me on Youtube! https://www.youtube.com/channel/UChXii0Ai8kFyZGP7VIVSGKg',
+    'Every time when a viewer subscribes to this channel for the first time, a custom rat emote for this viewer will be created and added to the BTTV emotes and the Discord server of this channel. Just let Ratback know how the rat should be colored and which emotion it should show, when you subscribe to Ratback for the first time. <3',
+    'Every support means a lot to me! No matter if you are a lurker, an active chatter, a donator, a subscriber or a cheerer - I am thankful to all of you people out there! Thanks a lot! <3'    
 ];
 
 setInterval(() => {
@@ -98,7 +100,8 @@ client.on('chat', function (channel, user, message, self) {
     switch (command) {
         // Help-Command.
         case ['commands', 'cmds', 'cmd', 'help', 'command'].find((value, index, arr) => command === value):
-            client.say(channelName, "/me I can operate the following commands: !discord !youtube !twitter !instagram !fiverr !tip !steam !poke @username !8ball [Your yes-no-question] !love !lurk !hydrate");
+            client.say(channelName, "/me I can operate the following commands: !ownemote !discord !youtube !twitter !instagram !fiverr !tip !steam !poke @username !8ball [Your yes-no-question] !love !lurk !hydrate");
+            client.say(channelName, '/me Soundboard Commands: !rbeng (English Social Media Announcement) !rbger (German Social Media Announcement)');
             break;
 
         // Discord Command.
@@ -175,6 +178,11 @@ client.on('chat', function (channel, user, message, self) {
         //Love
         case ['love', 'hype'].find((value, index, arr) => command == value):
             client.say(channelName, '<3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3');
+            break;
+
+        //Custom Emote for First Time Subscribers
+        case 'ownemote':
+            client.say(channelName, '/me Every time when a viewer subscribes to this channel for the first time, a custom rat emote for this viewer will be created and added to the BTTV emotes and the Discord server of this channel. Just let Ratback know how the rat should be colored and which emotion it should show, when you subscribe to Ratback for the first time. <3');
             break;
     }
 
