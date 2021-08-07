@@ -113,7 +113,7 @@ client.on('chat', function (channel, user, message, self) {
 
         // Stream Group
         case  ['group', 'steamgroup', 'sg'].find((value, index, arr) => command === value):
-            client.say(channelName, "/me Join the Ratback Community on Steam! Everyone is allowed to join the group: https://steamcommunity.com/groups/ratbacktwitch");
+            client.say(channelName, "/me Join Ratback's Community on Steam! Everyone is allowed to join the group: https://steamcommunity.com/groups/ratbacktwitch");
             break;
 
         // Fiverr Command.
