@@ -186,6 +186,10 @@ client.on('chat', function (channel, user, message, self) {
         case 'ownemote':
             client.say(channelName, '/me Every time when a viewer subscribes to this channel for the first time, a custom rat emote for this viewer will be created and added to the BTTV emotes and the Discord server of this channel. Just let Ratback know how the rat should be colored and which emotion it should show, when you subscribe to Ratback for the first time. <3');
             break;
-    }
 
+        //Wer
+        case 'wer':
+            client.say(channelName, '/me Ich spiele heute mit @KitTV und @xLumikettu! Schaut gerne mal bei ihren Kanälen vorbei: twitch.tv/kittv | twitch.tv/xlumikettu');
+            break;
+    }
 });
