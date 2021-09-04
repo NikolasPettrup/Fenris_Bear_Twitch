@@ -196,5 +196,10 @@ client.on('chat', function (channel, user, message, self) {
         case 'wer':
             client.say(channelName, '/me Ich spiele heute mit @KitTV, @xLumikettu und @HardyDigital! Schaut gerne mal bei ihren Kanälen vorbei: twitch.tv/kittv | twitch.tv/xlumikettu | twitch.tv/hardydigital');
             break;
+
+        //Martin
+        case 'martin':
+            client.say(channelName, '/me Schaut doch mal bei @KitTV vorbei. Ist ein korrekter Dude! twitch.tv/kittv');
+            break;
     }
 });
